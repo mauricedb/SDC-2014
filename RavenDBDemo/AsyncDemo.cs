@@ -28,6 +28,7 @@ namespace RavenDBDemo
             Console.WriteLine("Listing all customers without blocking a thread");
             var customers = await session.Query<Customer>()
                 .ToListAsync();
+
             foreach (var customer in customers)
             {
                 Console.WriteLine(customer);

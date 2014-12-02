@@ -27,6 +27,7 @@ namespace RavenDBDemo
         {
             Console.WriteLine("Listing all customers");
             var customers = session.Query<Customer>()
+                .Customize(c=>  c.WaitForNonStaleResultsAsOfNow())
                 .ToList();
 
             foreach (var customer in customers)

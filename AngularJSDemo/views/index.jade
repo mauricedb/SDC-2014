@@ -6,10 +6,16 @@ block content
   div(ng-app='demoApp')
     div(ng-controller='demoCtrl')
         p {{model.firstName}} {{model.lastName}}
+
         div First name:
           input(ng-model='model.firstName')
         div Last name:
           input(ng-model='model.lastName')
+        button(ng-click='add(model)') Add
+
+        ul
+            li(ng-repeat='person in people')
+                {{person.firstName}} {{person.lastName}}
 
   script(src='/javascripts/angular.js')
   script(src='/app/demoApp.js')
