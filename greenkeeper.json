@@ -1,0 +1,9 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "AngularJSDemo/package.json"
+      ]
+    }
+  }
+}
